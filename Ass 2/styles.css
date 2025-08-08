@@ -1,0 +1,143 @@
+/* A basic reset so browsers start from the same point */
+* {
+    box-sizing: border-box; /* this makes padding and borders easier to manage */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* light grey background */
+    color: #343a40; /* dark text color */
+}
+
+/* Style the header section */
+header {
+    background-color: #007bff; /* a nice blue */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* The main container for the timeline */
+.timeline {
+    position: relative; /* needed for positioning the line and markers */
+    width: 90%;
+    margin: 0 auto; /* center it on the page */
+}
+
+/* This is the vertical line that runs down the middle */
+.timeline::before {
+    content: ''; /* pseudo-elements need content */
+    position: absolute;
+    left: 20px;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #dee2e6; /* light grey line */
+}
+
+/* A single event in the timeline */
+.timeline-event {
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 45px; /* make space for the line and marker */
+}
+
+/* The circle on the timeline */
+.timeline-marker {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: 4px solid #007bff; /* same blue as the header */
+    border-radius: 50%; /* makes it a circle */
+    z-index: 1; /* make sure it's on top of the line */
+}
+
+/* The box holding the text for an event */
+.timeline-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* a subtle shadow */
+}
+
+.date {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.timeline-content h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Styles for the pop-up modal box */
+.modal {
+    display: none; /* hidden by default */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 20% auto; /* centers it vertically and horizontally */
+    padding: 20px;
+    width: 80%;
+    max-width: 450px;
+    border-radius: 5px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* --- RESPONSIVE STUFF --- */
+/* This code runs only on screens 768px or wider (tablets and desktops) */
+@media (min-width: 768px) {
+    
+    /* Center the line on big screens */
+    .timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Make event containers take up half the width */
+    .timeline-event {
+        width: 50%;
+    }
+    
+    /* Events on the left side */
+    .timeline-event:nth-child(odd) {
+        left: 0;
+        padding-right: 30px; /* space between text box and the line */
+        text-align: right;
+    }
+
+    /* Events on the right side */
+    .timeline-event:nth-child(even) {
+        left: 50%;
+        padding-left: 30px; /* space between text box and the line */
+    }
+
+    /* Put all markers in the center on the line */
+    .timeline-marker {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
