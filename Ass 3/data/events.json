@@ -1,0 +1,58 @@
+[
+    {
+        "year": 2000,
+        "title": "Y2K",
+        "description": "The year 2000 problem.",
+        "imageURL": "https://placehold.co/300x200?text=Y2K",
+        "category": "Technology"
+    },
+    {
+        "year": 2004,
+        "title": "Facebook Launch",
+        "description": "Mark Zuckerberg launches Facebook.",
+        "imageURL": "https://placehold.co/300x200?text=Facebook",
+        "category": "Social Media"
+    },
+    {
+        "year": 2007,
+        "title": "First iPhone",
+        "description": "Apple introduces the iPhone.",
+        "imageURL": "https://placehold.co/300x200?text=iPhone",
+        "category": "Technology"
+    },
+    {
+        "year": 2012,
+        "title": "Curiosity Rover",
+        "description": "NASA's Curiosity rover lands on Mars.",
+        "imageURL": "https://placehold.co/300x200?text=Curiosity",
+        "category": "Space"
+    },
+    {
+        "year": 2015,
+        "title": "Paris Agreement",
+        "description": "World leaders sign the Paris Climate Agreement.",
+        "imageURL": "https://placehold.co/300x200?text=Paris+Agreement",
+        "category": "Environment"
+    },
+    {
+        "year": 2018,
+        "title": "Falcon Heavy",
+        "description": "SpaceX launches Falcon Heavy for the first time.",
+        "imageURL": "https://placehold.co/300x200?text=Falcon+Heavy",
+        "category": "Space"
+    },
+    {
+        "year": 2020,
+        "title": "COVID-19 Pandemic",
+        "description": "Global pandemic declared by the WHO.",
+        "imageURL": "https://placehold.co/300x200?text=COVID-19",
+        "category": "Health"
+    },
+    {
+        "year": 2023,
+        "title": "AI Advancements",
+        "description": "Breakthroughs in AI technology.",
+        "imageURL": "https://placehold.co/300x200?text=AI",
+        "category": "Technology"
+    }
+]
